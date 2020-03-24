@@ -1,13 +1,19 @@
 {
   "name": "cypress-tutorial",
   "version": "1.0.0",
-  "description": "",
+  "description": "cypress-tutorial ZWQA",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:firefox": "cypress run --browser firefox"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zdalnewarsztatyqa/cypress-tutorial.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "ZWQA",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^4.2.0"
