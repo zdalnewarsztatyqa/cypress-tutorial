@@ -5,7 +5,7 @@ describe('When user navigate to submit your order', () => {
         cy.visit("http://automationpractice.com/index.php");
         cy.title()
             .should('eq', 'My Store');
-    })
+    });
 
     it('and user is logging in', () => {
 
@@ -15,7 +15,7 @@ describe('When user navigate to submit your order', () => {
         cy.signIn({ email: 'zdalnewarsztatyqa@gmail.com', password: 'Qwerty123' });
         cy.get('.logout')
             .should('be.visible');
-    })
+    });
 
     it('and select the product from the list and place the order then the order is confirmed', () => {
 
