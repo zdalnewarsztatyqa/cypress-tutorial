@@ -3,16 +3,8 @@ export default class HomePage {
         cy.visit("http://automationpractice.com/index.php")
     }
 
-    get signInButton() {
-        return cy.get('.login')
-    }
-
-    get titlePage() {
+   get titlePage() {
         return cy.title()
-    }
-
-    clickButtonSignIn() {
-        return this.signInButton.click()
     }
 
     verifyTitlePage(titlePage) {

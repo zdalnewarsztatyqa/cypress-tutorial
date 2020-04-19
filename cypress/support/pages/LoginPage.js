@@ -1,3 +1,5 @@
+import {LOGIN, PASSWORD} from "../../config/config";
+
 export default class LoginPage {
     get loginInput() {
         return cy.get('[id="email"]')
@@ -21,5 +23,11 @@ export default class LoginPage {
 
     clickButtonSignIn() {
         return this.signInButton.click()
+    }
+
+    signIn(login, password) {
+        this.inputLogin(login);
+        this.inputPassword(password);
+        this.clickButtonSignIn();
     }
 }
