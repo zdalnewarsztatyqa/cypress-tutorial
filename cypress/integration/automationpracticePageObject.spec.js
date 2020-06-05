@@ -15,7 +15,7 @@ import AddressPage from "../support/pages/orderFlow/AddressPage";
 import ShippingPage from "../support/pages/orderFlow/ShippingPage";
 import PaymentPage from "../support/pages/orderFlow/PaymentPage";
 import SummaryPage from "../support/pages/orderFlow/Summary";
-import NavigationPage from "../support/pages/orderFlow/NawigationPage";
+import NavigationPage from "../support/pages/NawigationPage";
 
 describe('when user navigate to submit your order', () => {
     let loginPage = new LoginPage();
@@ -29,17 +29,17 @@ describe('when user navigate to submit your order', () => {
     let navigationPage = new NavigationPage();
 
     before(function () {
-        homePage.visit();
+        homePage.visit(); //wejscie na strone
     });
 
     it('Should have proper tittle', function () {
-        homePage.verifyTitlePage(TITLE_PAGE);
+        homePage.verifyTitlePage(TITLE_PAGE); //sprawdzam tytuł strony
     });
 
     it('and user is logging in', function() {
-        navigationPage.clickButtonSignIn();
-        loginPage.signIn(LOGIN, PASSWORD);
-        accountPage.verifyIsVisibleButtonSignOut();
+        navigationPage.clickButtonSignIn(); //klika przycisk zaloguj
+        loginPage.signIn(LOGIN, PASSWORD); //wprowadza login, hasło i klika zaloguj
+        accountPage.verifyIsVisibleButtonSignOut(); //weryfikuje czy zalogował w operaciu o pojawienie się przycisku wyloguj
     });
 
     it('and select the product from the list and place the order then the order is confirmed', function () {

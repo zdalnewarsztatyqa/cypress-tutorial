@@ -1,5 +1,3 @@
-import {LOGIN, PASSWORD} from "../../config/config";
-
 export default class LoginPage {
     get loginInput() {
         return cy.get('[id="email"]')
